@@ -1,32 +1,45 @@
 console.log("complete");
-
-//window의 가로 세로 값을 구해 변수에 넣기
-// let window_width = console.log($(window).width());
-// let window_height = console.log($(window).height());
-
-// console.log(window_width);
-// console.log(window_height);
-
-// $(document).mousemove(function (e) {
-//   $("#status").html(e.pageX + ", " + e.pageY);
-//   $(".box").css("width", e.pageX);
-//   $(".box").css("height", e.pageY);
-// });
-
-// console.log(event);
+console.log($(window).width());
+console.log($(window).height());
 
 $(document).on("mousemove", function (event) {
-  console.log(event);
   let mouseX = event.pageX;
   let mouseY = event.pageY;
 
-  $(".bg_img").css("object-position", `${mouseX / 10}% ${mouseY / 10}%`);
+  let percentX = (mouseX / $(window).width()) * 500;
+  let percentY = (mouseY / $(window).height()) * 150;
 
-  //   let image_width = $(".cat_img").width() / 2;
-  //   let image_height = $(".cat_img").height() / 2;
-  let image_width = $(".cat_img").width();
-  let image_height = $(".cat_img").height();
+  $(".image").css("transform", `translate(${percentX}px, ${percentY}px)`);
+});
 
-  $(".cat_img").css("left", mouseX - image_width / 2 + "px");
-  $(".cat_img").css("top", mouseY - image_height / 2 + "px");
+$(".icon_img").on("click", function () {
+  $(".icon_text").toggleClass("active");
+});
+$(".icon2_img").on("click", function () {
+  $(".icon2_text").toggleClass("active");
+});
+$(".icon3_img").on("click", function () {
+  $(".icon3_text").toggleClass("active");
+});
+
+let state = 0;
+
+$(".click_Box").on("click", function () {
+  if (state == 0) {
+    $(".sunflower_img").removeClass("fadein").addClass("fadeout");
+    $(".star_img").removeClass("fadeout").addClass("fadein");
+    state = 1;
+  } else if (state == 1) {
+    $(".star_img").removeClass("fadein").addClass("fadeout");
+    $(".irises_img").removeClass("fadeout").addClass("fadein");
+    state = 2;
+  } else if (state == 2) {
+    $(".irises_img").removeClass("fadein").addClass("fadeout");
+    $(".cypresses_img").removeClass("fadeout").addClass("fadein");
+    state = 3;
+  } else if (state == 3) {
+    $(".cypresses_img").removeClass("fadein").addClass("fadeout");
+    $(".sunflower_img").removeClass("fadeout").addClass("fadein");
+    state = 0;
+  }
 });

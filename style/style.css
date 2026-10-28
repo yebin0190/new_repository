@@ -1,22 +1,273 @@
-.bg_img {
-  display: block;
-  width: 800px;
-  height: 600px;
-  object-fit: cover;
-  object-position: 0% 50%;
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+.noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-.cat_img {
+.text_En {
+  font-family: sans-serif;
+  position: fixed;
   display: block;
-  width: 200px;
-  position: absolute;
-  top: 250px;
-  left: 200px;
+  text-align: center;
+  filter: drop-shadow(2px 2px 4px black);
 }
+.text_Kr {
+  font-family: "Noto Sans KR", sans-serif;
+  position: fixed;
+  display: block;
+  text-align: center;
+  filter: drop-shadow(2px 2px 4px black);
+}
+.text_En.title {
+  font-size: 110px;
+  font-weight: 900;
+  color: white;
+}
+.text_En.a {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 10px;
+}
+.text_Kr.b {
+  font-size: 55px;
+  font-weight: 900;
+  color: gold;
+  letter-spacing: 1px;
+}
+.text_Kr.c {
+  font-size: 30px;
+  font-weight: 700;
 
+  color: white;
+}
+.text_En.d {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 1.5px;
+}
 .box {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  border-radius: 8px;
+  position: fixed;
+  left: 0px;
+  width: 1707px;
+  height: 100px;
+}
+.box.title {
+  top: 780px;
+  text-align: center;
+}
+.box.a {
+  top: 910px;
+  text-align: center;
+}
+.box.b {
+  top: 955px;
+  text-align: center;
+}
+.box.c {
+  top: 905px;
+  left: -62px;
+  text-align: right;
+}
+.box.d {
+  top: 950px;
+  left: -60px;
+  text-align: right;
+}
+.line {
+  position: fixed;
+  width: 256px;
+  height: 0.5px;
+  background-color: white;
+  top: 987px;
+  left: 1388px;
+}
+
+/* image */
+
+.image {
+  position: absolute;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 2916px;
+  height: 911px;
+  max-width: none;
+  left: -1050px;
+  top: -100px;
+}
+.sunflower_img {
+  opacity: 1;
+}
+.star_img {
+  opacity: 0;
+}
+.irises_img {
+  opacity: 0;
+}
+.cypresses_img {
+  opacity: 0;
+}
+
+.click_Box {
+  position: fixed;
+  width: 1707px;
+  height: 1067px;
+  top: 0;
+  left: 0;
+}
+
+.bg_img {
+  position: fixed;
+  display: block;
+  width: 1707px;
+  height: 1067px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 0%;
+  filter: drop-shadow(0px 0px 3px rgba(7, 8, 73));
+}
+
+.logo1_img {
+  position: fixed;
+  width: 80px;
+  height: 30px;
+  top: 995px;
+  left: 1470px;
+  object-fit: contain;
+}
+.logo2_img {
+  position: fixed;
+  width: 68px;
+  height: 20px;
+  top: 1000px;
+  left: 1575px;
+  object-fit: contain;
+}
+.icon_img {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 820px;
+  left: 50px;
+  object-fit: contain;
+}
+.icon2_img {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 895px;
+  left: 50px;
+  object-fit: contain;
+}
+.icon3_img {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 970px;
+  left: 50px;
+  object-fit: contain;
+}
+.icon_text {
+  font-family: "Noto Sans KR", sans-serif;
+  position: fixed;
+  display: block;
+  top: 837px;
+  left: 140px;
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  filter: drop-shadow(2px 2px 5px black);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.icon2_text {
+  font-family: "Noto Sans KR", sans-serif;
+  position: fixed;
+  display: block;
+  top: 912px;
+  left: 140px;
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  filter: drop-shadow(2px 2px 5px black);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.icon3_text {
+  font-family: "Noto Sans KR", sans-serif;
+  position: fixed;
+  display: block;
+  top: 987px;
+  left: 140px;
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  filter: drop-shadow(2px 2px 5px black);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.icon_img:hover {
+  filter: drop-shadow(0px 0px 5px white);
+}
+.icon_text.active {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.icon2_img:hover {
+  filter: drop-shadow(0px 0px 5px white);
+}
+.icon2_text.active {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.icon3_img:hover {
+  filter: drop-shadow(0px 0px 5px white);
+}
+.icon3_text.active {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadein {
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.fadeout {
+  animation-name: fadeOut;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
